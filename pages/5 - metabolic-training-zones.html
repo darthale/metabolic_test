@@ -1,0 +1,284 @@
+<style>
+  body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 20px;
+  }
+  .header {
+    text-align: center;
+    font-weight: bold;
+    font-size: 20px;
+    margin-bottom: 30px;
+  }
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+  }
+  th, td {
+    border: 1px solid black;
+    padding: 8px;
+    text-align: center;
+  }
+  th {
+    background-color: #f2f2f2;
+    font-weight: bold;
+  }
+  .zone-title {
+    width: 20%;
+    font-weight: bold;
+  }
+  .zone-m1 {
+    background-color: #fffde7;
+  }
+  .zone-m2 {
+    background-color: #e6f4f9;
+  }
+  .split-header {
+    border-bottom: none;
+  }
+  .sub-header {
+    border-top: none;
+  }
+  .section-title {
+    font-weight: bold;
+    margin-top: 30px;
+    margin-bottom: 15px;
+  }
+  .description {
+    margin-bottom: 20px;
+    line-height: 1.5;
+  }
+  .zone-definitions {
+    display: grid;
+    grid-template-columns: 100px 150px auto;
+    gap: 10px;
+    margin-bottom: 5px;
+  }
+  .zone-label {
+    font-weight: bold;
+  }
+  .zone-name {
+    padding: 5px;
+  }
+  .zone-description {
+    padding: 5px;
+  }
+  .zone1-name {
+    background-color: #e8f4f8;
+  }
+  .zone2-name {
+    background-color: #e8f4f8;
+  }
+  .zone3-name {
+    background-color: #e8f4f8;
+  }
+  .zone4-name {
+    background-color: #e8f4f8;
+  }
+  .zone5-name {
+    background-color: #e8f4f8;
+  }
+  .zone6-name {
+    background-color: #ffe6e6;
+  }
+  .zoneM1-name {
+    background-color: #fffde7;
+  }
+  .zoneM2-name {
+    background-color: #e6f4f9;
+  }
+  .subscript {
+    vertical-align: sub;
+    font-size: smaller;
+  }
+</style>
+
+<div class="header">
+  Individual, Metabolic Training Zones:
+</div>
+
+<table>
+  <thead>
+    <tr>
+      <th rowspan="2">Zone</th>
+      <th rowspan="2"></th>
+      <th colspan="2">Speed</th>
+      <th rowspan="2">Heart rate</th>
+      <th rowspan="2">Energy needs</th>
+      <th colspan="2">Fat portion:</th>
+      <th colspan="2">Carb portion:</th>
+      <th colspan="2">Prot-Constant:</th>
+      <th colspan="2">VO2:</th>
+    </tr>
+    <tr>
+      <th>km/h</th>
+      <th>min/km</th>
+      <th>kcal/h</th>
+      <th>g/h</th>
+      <th>kcal/h</th>
+      <th>g/h</th>
+      <th>kcal/h</th>
+      <th>g/h</th>
+      <th>Abs.</th>
+      <th>Rel.</th>
+    </tr>
+  </thead>
+  <tbody>
+    <!-- Zone M1 -->
+    <tr class="zone-m1">
+      <td class="zone-title" rowspan="3">Zone M1<br>Fat<span class="subscript">Max</span></td>
+      <td>From</td>
+      <td>9.5</td>
+      <td>06:18</td>
+      <td>140</td>
+      <td>691</td>
+      <td>571</td>
+      <td>61</td>
+      <td>107</td>
+      <td>26</td>
+      <td>13</td>
+      <td>3</td>
+      <td>2415</td>
+      <td>34.4</td>
+    </tr>
+    <tr class="zone-m1">
+      <td>Ø</td>
+      <td>11.2</td>
+      <td>05:21</td>
+      <td>157</td>
+      <td>804</td>
+      <td>608</td>
+      <td>65</td>
+      <td>183</td>
+      <td>45</td>
+      <td>13</td>
+      <td>3</td>
+      <td>2782</td>
+      <td>39.6</td>
+    </tr>
+    <tr class="zone-m1">
+      <td>To</td>
+      <td>12.9</td>
+      <td>04:39</td>
+      <td>173</td>
+      <td>913</td>
+      <td>547</td>
+      <td>59</td>
+      <td>353</td>
+      <td>86</td>
+      <td>13</td>
+      <td>3</td>
+      <td>3125</td>
+      <td>44.5</td>
+    </tr>
+
+    <!-- Zone M2 -->
+    <tr class="zone-m2">
+      <td class="zone-title" rowspan="3">Zone M2<br>Carb<span class="subscript">Max</span></td>
+      <td>From</td>
+      <td>12.0</td>
+      <td>05:01</td>
+      <td>164</td>
+      <td>855</td>
+      <td>596</td>
+      <td>64</td>
+      <td>245</td>
+      <td>60</td>
+      <td>13</td>
+      <td>3</td>
+      <td>2944</td>
+      <td>41.9</td>
+    </tr>
+    <tr class="zone-m2">
+      <td>Ø</td>
+      <td>12.5</td>
+      <td>04:48</td>
+      <td>169</td>
+      <td>890</td>
+      <td>572</td>
+      <td>61</td>
+      <td>305</td>
+      <td>75</td>
+      <td>13</td>
+      <td>3</td>
+      <td>3054</td>
+      <td>43.5</td>
+    </tr>
+    <tr class="zone-m2">
+      <td>To</td>
+      <td>13.0</td>
+      <td>04:37</td>
+      <td>174</td>
+      <td>920</td>
+      <td>538</td>
+      <td>58</td>
+      <td>368</td>
+      <td>90</td>
+      <td>13</td>
+      <td>3</td>
+      <td>3145</td>
+      <td>44.8</td>
+    </tr>
+  </tbody>
+</table>
+
+<div class="section-title">
+  Physiological and Metabolic Training Zones:
+</div>
+
+<div class="description">
+  The difference between physiological and metabolic training zones and those calculated according to a specific method is that the zones and intensities listed here are based on actually measured performances and physical reactions.
+</div>
+
+<div class="description">
+  In calculated zones, a threshold value is usually taken as a 100% mark, from which the zones are then calculated. Since this does not take into account the important aspects of stress such as oxygen uptake and utilization, metabolism and cardiovascular reactions, there is a high risk that work with it will cause long-term damage to the body. The areas presented here also include the individual data of substrate kinetics (dynamic energy balance) visualized on the following page and are defined as follows:
+</div>
+
+<div class="zone-definitions">
+  <div class="zone-label">Zone 1:</div>
+  <div class="zone-name zone1-name">Active Recovery</div>
+  <div class="zone-description">Low intensity, in which the body can use the absorbed oxygen to actively reduce stressors.</div>
+</div>
+
+<div class="zone-definitions">
+  <div class="zone-label">Zone 2:</div>
+  <div class="zone-name zone2-name">Muscular Base</div>
+  <div class="zone-description">Intensity at which no stress is triggered at the muscular level. This area ends at VT1.</div>
+</div>
+
+<div class="zone-definitions">
+  <div class="zone-label">Zone 3:</div>
+  <div class="zone-name zone3-name">Development Zone</div>
+  <div class="zone-description">In this zone, the body has to work more intensively with all systems. Too much movement in this zone can lead to overtraining.</div>
+</div>
+
+<div class="zone-definitions">
+  <div class="zone-label">Zone 4:</div>
+  <div class="zone-name zone4-name">Threshold Zone</div>
+  <div class="zone-description">Intensity that trains the balance between oxygen uptake and deficit at the respiratory level.</div>
+</div>
+
+<div class="zone-definitions">
+  <div class="zone-label">Zone 5:</div>
+  <div class="zone-name zone5-name">Aerobic Maximum</div>
+  <div class="zone-description">Exhaustion and development of the muscular oxygen uptake potential.</div>
+</div>
+
+<div class="zone-definitions">
+  <div class="zone-label">Zone 6:</div>
+  <div class="zone-name zone6-name">Maximum Zone</div>
+  <div class="zone-description">Pure neuromuscular work: In this zone, no metabolic processes are triggered anymore.</div>
+</div>
+
+<div class="zone-definitions">
+  <div class="zone-label">Zone M1:</div>
+  <div class="zone-name zoneM1-name">Fat<span class="subscript">Max</span></div>
+  <div class="zone-description">Zone of maximum fat burning (by quantity). The end of this zone marks the beginning of possible metabolic stress.</div>
+</div>
+
+<div class="zone-definitions">
+  <div class="zone-label">Zone M2:</div>
+  <div class="zone-name zoneM2-name">Carb<span class="subscript">Max</span></div>
+  <div class="zone-description">Zone in which the body burns between 60 and 90 grams of carbohydrates per hour.</div>
+</div>

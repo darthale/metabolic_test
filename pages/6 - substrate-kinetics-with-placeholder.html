@@ -1,0 +1,99 @@
+<style>
+  body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 20px;
+  }
+  .header {
+    text-align: center;
+    font-weight: bold;
+    font-size: 20px;
+    margin-bottom: 30px;
+  }
+  .chart-placeholder {
+    width: 100%;
+    height: 600px;
+    border: 1px dashed #ccc;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 30px;
+    background-color: #f9f9f9;
+  }
+  .description {
+    margin-bottom: 20px;
+    line-height: 1.5;
+  }
+  .legend {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 20px;
+    justify-content: center;
+  }
+  .legend-item {
+    margin-right: 20px;
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+  }
+  .legend-color {
+    width: 30px;
+    height: 2px;
+    margin-right: 5px;
+  }
+  .total {
+    background-color: purple;
+  }
+  .fat {
+    background-color: orange;
+  }
+  .carb {
+    background-color: #3498db;
+  }
+  .protein {
+    background-color: #e74c3c;
+  }
+</style>
+
+<div class="header">
+  Visualization of Substrate Kinetics / Energy Balance:
+</div>
+
+<div class="chart-placeholder">
+  <img src="imgs/chart.png" alt="Substrate Kinetics Chart" style="max-width: 100%; max-height: 100%;">
+</div>
+
+<div class="legend">
+  <div class="legend-item">
+    <div class="legend-color carb"></div>
+    <span>CarbMax Zone</span>
+  </div>
+  <div class="legend-item">
+    <div class="legend-color fat"></div>
+    <span>FatMax Zone</span>
+  </div>
+  <div class="legend-item">
+    <div class="legend-color total"></div>
+    <span>Total consumption kcal/h</span>
+  </div>
+  <div class="legend-item">
+    <div class="legend-color fat"></div>
+    <span>Fat oxidation kcal/h</span>
+  </div>
+  <div class="legend-item">
+    <div class="legend-color carb"></div>
+    <span>Carbohydrates kcal/h</span>
+  </div>
+  <div class="legend-item">
+    <div class="legend-color protein"></div>
+    <span>Protein constant kcal/h</span>
+  </div>
+</div>
+
+<div class="description">
+  "Substrate kinetics" refers to the movement of different energy sources in relation to each other under stress. Not only the amount of energy required is important, but also the type of curves. The greater the proportion of metabolized fats, the better the body can not only absorb oxygen but also use it for energy production.
+</div>
+
+<div class="description">
+  The protein portion is represented as a constant, since the daily required amount cannot be measured via respiration but is included based on calculated UN value.
+</div>

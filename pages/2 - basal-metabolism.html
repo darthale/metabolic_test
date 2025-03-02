@@ -1,0 +1,241 @@
+<style>
+  body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 20px;
+  }
+  .header {
+    text-align: center;
+    font-weight: bold;
+    font-size: 20px;
+    margin-bottom: 20px;
+  }
+  .subtitle {
+    text-align: center;
+    margin-bottom: 30px;
+  }
+  .metrics-container {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 30px;
+  }
+  .metric {
+    width: 16%;
+    text-align: center;
+  }
+  .metric-header {
+    background-color: #d8e4e8;
+    padding: 8px;
+    margin-bottom: 10px;
+    font-weight: bold;
+  }
+  .metric-value {
+    font-size: 18px;
+    font-weight: bold;
+  }
+  .metric-unit {
+    font-size: 14px;
+    color: #555;
+  }
+  .macros-container {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 30px;
+  }
+  .macro {
+    width: 30%;
+    text-align: center;
+  }
+  .macro-header {
+    padding: 8px;
+    margin-bottom: 10px;
+    font-weight: bold;
+  }
+  .fats-header {
+    background-color: #e8f4f8;
+  }
+  .carbs-header {
+    background-color: #fffde7;
+  }
+  .protein-header {
+    background-color: #ffeee6;
+  }
+  .chart {
+    width: 150px;
+    height: 150px;
+    margin: 0 auto 15px auto;
+  }
+  .macro-percentage {
+    font-size: 18px;
+    font-weight: bold;
+  }
+  .macro-calories {
+    margin-top: 5px;
+  }
+  .macro-grams {
+    margin-top: 5px;
+  }
+  .explanation {
+    margin-bottom: 30px;
+  }
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+  }
+  th, td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: center;
+  }
+  th {
+    background-color: #f2f2f2;
+  }
+  .table-caption {
+    font-weight: bold;
+    margin-bottom: 10px;
+  }
+</style>
+
+<div class="header">
+  Basal Metabolism BMR:
+</div>
+
+<div class="subtitle">
+  For the analysis of your basal metabolism, your nutrient requirements for 24 hours were determined with the help of spirometry and respiratory gas analysis.
+</div>
+
+<div class="metrics-container">
+  <div class="metric">
+    <div class="metric-header">Respiratory volume:</div>
+    <div class="metric-value">12.8</div>
+    <div class="metric-unit">L/min</div>
+  </div>
+  
+  <div class="metric">
+    <div class="metric-header">Respiratory frequency:</div>
+    <div class="metric-value">13.4</div>
+    <div class="metric-unit">1/min</div>
+  </div>
+  
+  <div class="metric">
+    <div class="metric-header">Basal metabolic rate BMR:</div>
+    <div class="metric-value">2640</div>
+    <div class="metric-unit">kcal/day</div>
+  </div>
+  
+  <div class="metric">
+    <div class="metric-header">RQ:</div>
+    <div class="metric-value">0.82</div>
+    <div class="metric-unit"></div>
+  </div>
+  
+  <div class="metric">
+    <div class="metric-header">VO2:</div>
+    <div class="metric-value">381</div>
+    <div class="metric-unit">mL/min</div>
+  </div>
+  
+  <div class="metric">
+    <div class="metric-header">VCO2:</div>
+    <div class="metric-value">314</div>
+    <div class="metric-unit">mL/min</div>
+  </div>
+</div>
+
+<div class="macros-container">
+  <div class="macro">
+    <div class="macro-header fats-header">Fats:</div>
+    <div class="chart">
+      <svg width="150" height="150" viewBox="0 0 150 150">
+        <circle cx="75" cy="75" r="60" fill="none" stroke="#e0e0e0" stroke-width="15"/>
+        <circle cx="75" cy="75" r="60" fill="none" stroke="#4db8ff" stroke-width="15" stroke-dasharray="377 377" stroke-dashoffset="177" transform="rotate(-90 75 75)"/>
+        <text x="75" y="80" font-size="20" text-anchor="middle">53.0%</text>
+      </svg>
+    </div>
+    <div class="macro-percentage">53.0%</div>
+    <div class="macro-calories">1395 kcal / day</div>
+    <div class="macro-grams">150 g / day</div>
+  </div>
+  
+  <div class="macro">
+    <div class="macro-header carbs-header">Carbohydrates:</div>
+    <div class="chart">
+      <svg width="150" height="150" viewBox="0 0 150 150">
+        <circle cx="75" cy="75" r="60" fill="none" stroke="#e0e0e0" stroke-width="15"/>
+        <circle cx="75" cy="75" r="60" fill="none" stroke="#ffcd42" stroke-width="15" stroke-dasharray="377 377" stroke-dashoffset="254" transform="rotate(-90 75 75)"/>
+        <text x="75" y="80" font-size="20" text-anchor="middle">32.6%</text>
+      </svg>
+    </div>
+    <div class="macro-percentage">32.6%</div>
+    <div class="macro-calories">924 kcal / day</div>
+    <div class="macro-grams">225 g / day</div>
+  </div>
+  
+  <div class="macro">
+    <div class="macro-header protein-header">Proteins:</div>
+    <div class="chart">
+      <svg width="150" height="150" viewBox="0 0 150 150">
+        <circle cx="75" cy="75" r="60" fill="none" stroke="#e0e0e0" stroke-width="15"/>
+        <circle cx="75" cy="75" r="60" fill="none" stroke="#ff9966" stroke-width="15" stroke-dasharray="377 377" stroke-dashoffset="322" transform="rotate(-90 75 75)"/>
+        <text x="75" y="80" font-size="20" text-anchor="middle">14.5%</text>
+      </svg>
+    </div>
+    <div class="macro-percentage">14.5%</div>
+    <div class="macro-calories">321 kcal / day</div>
+    <div class="macro-grams">78 g / day</div>
+  </div>
+</div>
+
+<div class="explanation">
+  <p>The breathing pattern (respiratory volume and -frequency) can show whether the body can generally recover well (= calm, deep breathing) or is under stress (= high respiratory frequency and low respiratory volume).</p>
+  
+  <p>The basal metabolic rate BMR (Basic Metabolic Rate) shows the total energy requirement in kilocalories on an average active day. The resting values are later calculated based on the measured individual, metabolic equivalent iMET. The measured values for oxygen uptake (VO2) and release of CO2 (VCO2) provide information about how efficiently the body cells process oxygen outside of athletic stress and whether the body is possibly under stress. Here, the Respiratory Quotient (RQ) serves as a reference point: if it is between a value of 0.8 and 0.9, the assumption is justified that the body is healthy and can function stress-free outside of exercise.</p>
+</div>
+
+<div class="table-caption">
+  The course of your basal metabolism:
+</div>
+
+<table>
+  <thead>
+    <tr>
+      <th>Date:</th>
+      <th>VE Ergo</th>
+      <th>Af</th>
+      <th>BMR</th>
+      <th>RQ</th>
+      <th>VO2</th>
+      <th>VCO2</th>
+      <th>Fat</th>
+      <th>CH</th>
+      <th>Prot.</th>
+    </tr>
+    <tr>
+      <th></th>
+      <th>L/min</th>
+      <th>1/min</th>
+      <th>kcal/day</th>
+      <th>-</th>
+      <th>mL/min</th>
+      <th>mL/min</th>
+      <th>g/day</th>
+      <th>g/day</th>
+      <th>g/day</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>28.02.2025</td>
+      <td>12.8</td>
+      <td>13.4</td>
+      <td>2640</td>
+      <td>0.82</td>
+      <td>381</td>
+      <td>314</td>
+      <td>150</td>
+      <td>225</td>
+      <td>78</td>
+    </tr>
+  </tbody>
+</table>

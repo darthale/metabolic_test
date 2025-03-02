@@ -1,0 +1,475 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Performance Diagnostics «Complete» on the Treadmill: Interpretation Guide</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 20px;
+            color: #333;
+        }
+        .header {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+        .header img {
+            max-width: 100%;
+            height: auto;
+        }
+        h1 {
+            text-align: center;
+            margin-top: 20px;
+            margin-bottom: 30px;
+        }
+        h2 {
+            background-color: #d3e9e9;
+            padding: 10px;
+            margin-top: 40px;
+        }
+        .chart {
+            text-align: center;
+            margin: 20px 0;
+        }
+        .chart img {
+            max-width: 100%;
+            height: auto;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+        }
+        table, th, td {
+            border: 1px solid #ddd;
+        }
+        th, td {
+            padding: 10px;
+            text-align: left;
+        }
+        .metric-box {
+            background-color: #e5e5e5;
+            border-radius: 5px;
+            padding: 15px;
+            margin: 10px 0;
+        }
+        .zone-box {
+            background-color: #d3e9e9;
+            border-radius: 5px;
+            padding: 15px;
+            margin: 15px 0;
+        }
+        .zone-title {
+            font-weight: bold;
+            margin-bottom: 5px;
+        }
+        .footer {
+            margin-top: 50px;
+            text-align: center;
+            font-style: italic;
+        }
+        .vo2-chart {
+            text-align: center;
+            margin: 30px 0;
+        }
+        .vo2-gauge {
+            width: 150px;
+            height: auto;
+            display: block;
+            margin: 0 auto;
+        }
+        .vo2-value {
+            text-align: center;
+            font-size: 1.2em;
+            margin: 10px 0;
+        }
+        .vo2-rating {
+            text-align: center;
+            background-color: #d3e9e9;
+            padding: 5px;
+            width: 100px;
+            margin: 0 auto;
+        }
+        .metabolism-chart {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+            margin: 20px 0;
+        }
+        .macro-circle {
+            width: 150px;
+            text-align: center;
+            margin: 15px;
+        }
+        .macro-title {
+            background-color: #e5e5e5;
+            padding: 5px;
+            margin-bottom: 10px;
+        }
+        .macro-graphic {
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            margin: 0 auto;
+            position: relative;
+            overflow: hidden;
+        }
+        .macro-graphic-inner {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5em;
+            font-weight: bold;
+        }
+        .fat-circle {
+            border: 10px solid #6fc;
+        }
+        .carb-circle {
+            border: 10px solid #fc6;
+        }
+        .protein-circle {
+            border: 10px solid #f99;
+        }
+        .macro-values {
+            margin-top: 10px;
+            font-size: 0.9em;
+        }
+        .metabolic-profile {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            margin: 30px 0;
+        }
+        .profile-box {
+            width: 45%;
+            min-width: 300px;
+            background-color: #d3e9e9;
+            margin-bottom: 15px;
+            padding: 15px;
+            border-radius: 5px;
+        }
+        .profile-metric {
+            background-color: white;
+            margin: 10px 0;
+            padding: 10px;
+            border-radius: 5px;
+        }
+        .breathing-chart {
+            text-align: center;
+            margin: 30px 0;
+        }
+        .energy-reserves {
+            display: flex;
+            justify-content: center;
+            margin: 30px 0;
+        }
+        .body-diagram {
+            width: 200px;
+            text-align: center;
+        }
+        .energy-table {
+            margin-left: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <img src="/api/placeholder/800/200" alt="Tricademy - School of Movement GmbH">
+    </div>
+
+    <h1>Performance Diagnostics «Complete» on the Treadmill: Interpretation Guide</h1>
+
+    <p>Dear athlete,</p>
+
+    <p>Thank you for your visit to our laboratory and the trust you place in us! On the following pages, you will find an interpretation guide for your report, where we will go through your data step by step and explain what the various terms mean. If you have any questions afterward, please do not hesitate to reach out to us!</p>
+
+    <h2>Page 1: General Information and Overview</h2>
+
+    <p>On the first page, you will find your own information that you provided us with (name, date of birth, etc.) as well as some initial measurements that we took directly from your BIA measurement. These include your weight and height, as well as your body water value ("Total Body Water").</p>
+
+    <p>Based on your activity level, this value was used to calculate an estimate of your daily urine nitrogen excretion ("Determined UN Value").</p>
+
+    <p>This value is important because it currently represents the only way to estimate your protein requirements both at rest and under stress. As you will see later, this is a constant that does not change during the measurement.</p>
+
+    <p>The reason for this is simple: when proteins are actively burned in the body, this occurs in a so-called catabolic process, where proteins are first "converted" into carbohydrates and subsequently used as such.</p>
+
+    <p>This leads to no other substrates being measured in respiration and correspondingly in the respiratory gas analysis, but rather that only the demand for carbohydrates increases.</p>
+
+    <p>Under stress, this value will naturally not remain absolutely constant, but since current technology does not make it possible to take concrete measurements here, we take the approach that gives us the most plausible results.</p>
+
+    <p>You will also find an initial insight into your VO2Max:</p>
+
+    <div class="vo2-chart">
+        <img src="imgs/vo2-chart.png" alt="VO2 Max Chart">
+    </div>
+
+    <h2>Page 2: Basic Metabolism BMR</h2>
+
+    <p>The Basic Metabolic Rate ("BMR") shows, on one hand, how much energy in kcal is needed in 24h when the body is averagely active (without sports) and, on the other hand, how this energy is composed.</p>
+
+    <p>It is important to understand here that there is a clear difference between the resting energy or total energy measured via the BIA scale and the basic metabolism. While resting energy represents a value that reflects the caloric energy requirements based on body composition in 24h of absolute rest, the total energy indicates the anticipated amount of kcal that is calculated taking into account the PAL (Physical Activity Level) also stored in the BIA measurement.</p>
+
+    <p>The basic metabolism, on the other hand, is based on an actual measurement of bodily functions and indicates how much energy is needed in 24h of average activity. Additionally, insights into the breathing pattern, oxygen uptake, and cellular health are gained with the help of the determined UN value and respiratory gas analysis. These analyses also make it possible to capture the actual balance of substrate consumption. For the function of metabolism, this balance is ultimately more important than the actual amount of macronutrients consumed.</p>
+
+    <div class="metabolism-chart">
+        <div class="macro-circle">
+            <div class="macro-title">Fats:</div>
+            <div class="macro-graphic fat-circle">
+                <div class="macro-graphic-inner">36.1%</div>
+            </div>
+            <div class="macro-values">
+                1020 kcal / day<br>
+                110 g / day
+            </div>
+        </div>
+        <div class="macro-circle">
+            <div class="macro-title">Carbohydrates:</div>
+            <div class="macro-graphic carb-circle">
+                <div class="macro-graphic-inner">52.1%</div>
+            </div>
+            <div class="macro-values">
+                1494 kcal / day<br>
+                362 g / day
+            </div>
+        </div>
+        <div class="macro-circle">
+            <div class="macro-title">Proteins:</div>
+            <div class="macro-graphic protein-circle">
+                <div class="macro-graphic-inner">11.9%</div>
+            </div>
+            <div class="macro-values">
+                329 kcal / day<br>
+                80 g / day
+            </div>
+        </div>
+    </div>
+
+    <p>This evaluation can be used, for example, to design nutrition and adapt it to different stresses. If the basic metabolism is really taken as a starting point, it represents the effective basis, and through analysis of the training, it can be very easily determined how this affects the interplay of the energy balance and what this means for nutrition in general. For this, we recommend consulting the table with energy balances under stress (training zones) in addition to the basic measurement.</p>
+
+    <h2>Page 3: The Metabolic Profile</h2>
+
+    <p>The metabolic profile is a very powerful tool that can help to quickly identify various training progress. It is the core of modern diagnostics and currently consists of 4 main values, each supplemented with 3 additional points. It also forms the basis of individual, physiological training zones:</p>
+
+    <div class="metabolic-profile">
+        <div class="profile-box">
+            <strong>VT1</strong>
+            <div class="profile-metric">
+                <strong>Performance / Heart Rate:</strong><br>
+                12.1 km/h<br>
+                04:57 min/km<br>
+                152 bpm
+            </div>
+            <div class="profile-metric">
+                <strong>Oxygen Uptake:</strong><br>
+                2763 mL/min<br>
+                40.9 mL/min/kg
+            </div>
+            <div class="profile-metric">
+                <strong>Fat Burning:</strong><br>
+                19 g/h<br>
+                176 kcal/h
+            </div>
+            <div class="profile-metric">
+                <strong>Carbohydrate Burning:</strong><br>
+                157 g/h<br>
+                643 kcal/h
+            </div>
+        </div>
+        <div class="profile-box">
+            <strong>VT2</strong>
+            <div class="profile-metric">
+                <strong>Performance / Heart Rate:</strong><br>
+                14.4 km/h<br>
+                03:53 min/km<br>
+                183 bpm
+            </div>
+            <div class="profile-metric">
+                <strong>Oxygen Uptake:</strong><br>
+                3052 mL/min<br>
+                51.9 mL/min/kg
+            </div>
+            <div class="profile-metric">
+                <strong>Fat Burning:</strong><br>
+                0 g/h<br>
+                0 kcal/h
+            </div>
+            <div class="profile-metric">
+                <strong>Carbohydrate Burning:</strong><br>
+                259 g/h<br>
+                1061 kcal/h
+            </div>
+        </div>
+        <div class="profile-box">
+            <strong>FatMax</strong>
+            <div class="profile-metric">
+                <strong>Performance / Heart Rate:</strong><br>
+                7.3 km/h<br>
+                08:13 min/km<br>
+                110 bpm
+            </div>
+            <div class="profile-metric">
+                <strong>Oxygen Uptake:</strong><br>
+                1763 mL/min<br>
+                26.9 mL/min/kg
+            </div>
+            <div class="profile-metric">
+                <strong>Fat Burning:</strong><br>
+                31 g/h<br>
+                287 kcal/h
+            </div>
+            <div class="profile-metric">
+                <strong>Carbohydrate Burning:</strong><br>
+                51 g/h<br>
+                211 kcal/h
+            </div>
+        </div>
+        <div class="profile-box">
+            <strong>VO2Max</strong>
+            <div class="profile-metric">
+                <strong>Performance / Heart Rate:</strong><br>
+                15.9 km/h<br>
+                03:46 min/km<br>
+                186 bpm
+            </div>
+            <div class="profile-metric">
+                <strong>Oxygen Uptake:</strong><br>
+                3059 mL/min<br>
+                53.4 mL/min/kg
+            </div>
+            <div class="profile-metric">
+                <strong>Fat Burning:</strong><br>
+                0 g/h<br>
+                0 kcal/h
+            </div>
+            <div class="profile-metric">
+                <strong>Carbohydrate Burning:</strong><br>
+                268 g/h<br>
+                1097 kcal/h
+            </div>
+        </div>
+    </div>
+
+    <p>Behind this stands the individuality of each person. At the moment, there is no objective way to calculate the individual functions and reactions of the body in relation to stress, which is why a direct measurement gives the deepest insight here.</p>
+
+    <p>The profile includes the following values:</p>
+
+    <div class="zone-box">
+        <div class="zone-title">The Ventilatory Threshold VT 1:</div>
+        <p>VT1 marks the point where the body shows measurable symptoms of exertion for the first time during a linear increase in performance. Specifically, this means that, in the first instance, breathing begins to change. Simultaneously and in correlation, adaptations in metabolism as well as cardiovascular reaction and work are shown. We define with VT1 the end of training zone 2, simplified also called "base zone".</p>
+    </div>
+
+    <div class="zone-box">
+        <div class="zone-title">The Ventilatory Threshold VT 2:</div>
+        <p>VT2 or "Anaerobic Threshold" marks, very simplified, the point from which the body is no longer capable of fully absorbing the inhaled oxygen. It is important to note here that a "measurable decrease" does not mean that no more oxygen can be absorbed overall. The better trained a body is, the longer an endurance performance can be maintained in the VT2 range. Top athletes are sometimes certainly able to run, for example, a half marathon even above VT2, since "significantly measurably less oxygen" in extreme cases still means "enough for up to 80min of performance". However, these are exceptions, not the rule.</p>
+    </div>
+
+    <p><strong>IMPORTANT:</strong> It must be mentioned here that VT2 is not to be confused with any lactate threshold and has nothing to do with "FTP". Through years of revision, research and translation, there is now a veritable chaos around the concepts of the various thresholds. It is often forgotten that spiroergometry is virtually the "mother of performance diagnostics". Its history dates back to 1789, terms like "SteadyState" and "O2Deficit" were coined around 1924 with the discovery of VO2max. The measurement and diagnostics based on lactate or other methods ultimately represents an attempt to reproduce the laboratory-measured and in vitro validated thresholds through less elaborate procedures, sometimes even in the field. To date, however, this has not been achieved objectively, partly due to the fact that the reference groups were almost exclusively very small and also mostly consisted of young, male top athletes in a very small age group. On the other hand, such methods simply ignore what should actually be at the center: each human body functions and works individually in the final analysis. This led to the fact that, in the meantime, besides various methods for "threshold determination", there are over 70 recognized models for lactate thresholds, which, in the end, hardly ever deliver the same results.</p>
+
+    <div class="zone-box">
+        <div class="zone-title">The Maximum Fat Burning FatMax:</div>
+        <p>The maximum fat combustion is a value that indicates, on one hand, how much energy the body can maximally derive from fats. On the other hand, it also indicates at which performance this is the case, which gives insights into cellular health in the linear progression. Basically, it must be mentioned here that neither a high VT1 nor a high VO2Max are a guarantee for good fat burning. The course of fat oxidation is rather a mirror of the body's stress state, with the help of which very targeted work can be done objectively in this area.</p>
+    </div>
+
+    <div class="zone-box">
+        <div class="zone-title">The Maximum Oxygen Uptake Capacity:</div>
+        <p>The VO2Max shows, as already mentioned at the beginning, how much oxygen the body can maximally absorb. As a rule, the relative value is given here, i.e., the absolutely measured amount divided by body weight. This value is often taken as a benchmark for potential endurance performance, but this is not necessarily the case. Much more important than the amount of oxygen that can be brought into the body is the amount of O2 that is also actively used for metabolic processes. If a high VO2max meets a low Fatmax, this is an indication of a body under stress, in which the excess oxygen can cause oxidative damage.</p>
+    </div>
+
+    <p>Working with the metabolic profile makes it possible to recognize training influences and their effects on more than one level. If, for example, performance at VT1 changes after a certain time with an unchanged energy balance but lower heart rate, this is a training improvement. The same applies to any other positive change: if, for example, the amount of metabolized fats increases at the same performance, this is also an indication of training progress.</p>
+
+    <p>At the same time, it is important to understand here that the values of VT1 and VO2Max are not only systemic-respiratory values, but also provide insights into the muscular development of the body. Simplified, a decreasing VT1 can be an indication that the body is losing muscle mass (less functional muscle mass = onset of exertion earlier). The same applies to the absolute VO2Max: changes in this value are a good indicator of the functional and directly involved muscle mass in the movement. Supplemented with bioimpedance analysis, the metabolic profile provides an enormously powerful tool for ensuring that training is also going in the right direction.</p>
+
+    <h2>Page 4: The Individual, Physiological and Metabolic Training Zones</h2>
+
+    <p>As already mentioned, we refrain from calculating training zones based on a single threshold. We also refrain from terms like "GA1" or "ReKom", as a similar problem exists here as with the definition of thresholds: due to the lack of an international standard, there are now so many determination methods that it borders on impossibility to find a common denominator. Instead, we determine the training zones based on actually measured, physiological and metabolic functions and reactions, which we validate in real-time and during direct measurement. This results in the following areas:</p>
+
+    <div class="zone-box">
+        <div class="zone-title">Zone 1: Active Recovery</div>
+        <p>As the name suggests, active recovery should take place in this area. It is defined by the relationship between absorbed and used oxygen for the stress. This value, also referred to as "economy", transitions into an almost linear slope from a certain point in its progression, marking the point at which oxygen uptake begins to correspond to the increasing stress. This is usually the case between 50 and 60% of VO2Max, although it can also occur significantly higher in professionals as well as well-trained athletes.</p>
+    </div>
+
+    <div class="zone-box">
+        <div class="zone-title">Zone 2: Muscular Base</div>
+        <p>Zone 2 is typically where training occurs that is referred to as "base endurance". Zone 2 extends from the end of active recovery to VT1, thus marking an area in which the body can work rather loosely and relaxed at a muscular level, only having to exert itself conditionally a little. On the Borg scale of subjective perception, movement in this zone should settle at about a "4". It is important to understand here that it concerns muscular work. There is no guarantee that good or even maximum fat burning takes place in this area, which is why it is advisable to consult the energy balances and oxygen uptake. The Oxidative Stress Index also gains importance here (see corresponding explanation).</p>
+    </div>
+
+    <div class="zone-box">
+        <div class="zone-title">Zone 3: Development Area</div>
+        <p>The designation "development area" for Zone 3 can be somewhat misleading, as it suggests that the body is capable of developing and building performance here. However, this is only conditionally the case. Rather, Zone 3 is an area in which the body is subjected to several forms of stress: Due to increased muscular activity, more work must be done here, resulting in a higher heart rate. Also, in this area, there is often only a very small fat oxidation left, which means that the increased oxygen uptake can tend to lead to oxidative stress. Since the demand for carbohydrates in Zone 3 often increases drastically, metabolic stress can also arise here in the form of large caloric deficits. At the same time, the intensities are not yet high enough for the body to begin a real adaptation process. This can lead to "getting stuck" in Zone 3 (in English, there is the concept of "Zone 3-stagnation") and beginning to physically decline again in the medium to long term. For this reason, Zone 3 should be used primarily for immediate competition preparation and also for pacing. Zone 3 extends from VT1 to 95% of VT2.</p>
+    </div>
+
+    <div class="zone-box">
+        <div class="zone-title">Zone 4: Threshold Area</div>
+        <p>Here, "threshold" refers to VT2, the Anaerobic Threshold. The area ranges from 95% of the threshold mark to the first reaching of the Aerobic Maximum, i.e., VO2Max. The 5% that come into the equation here are intended as a variable for daily form, as it can certainly happen that VT2 varies a little depending on pre-fatigue, recovery, and other influences. Depending on how high the performance at VO2Max is, the threshold area can be smaller or larger, which, besides individual predisposition, is also enormously dependent on the training focus.</p>
+    </div>
+
+    <div class="zone-box">
+        <div class="zone-title">Zone 5: Aerobic Maximum</div>
+        <p>The Vo2Max range extends from the first point at which maximum oxygen uptake capacity was reached to a maximum of 20% above this value. This bandwidth was determined through various tests in which the subjects were tested on the possibility of still inducing a metabolic reaction in the body under high stress. Since these tests reliably yielded a range of 18-22% above VO2Max, we allow ourselves the arithmetic mean of 20% here. In this area, intervals take place whose goal is to create an oxygen deficit in the muscle, which is first compensated, then super-compensated in the recovery phase. However, it is important in the design of these intervals that the individual, metabolic delay is taken into account. If this delay is disregarded, it can lead to the body being overloaded.</p>
+    </div>
+
+    <div class="zone-box">
+        <div class="zone-title">Zone 6: Maximum Area</div>
+        <p>Above 20% over VO2Max, the body typically works only Neuromuscularly due to the high intensity. That is: neither metabolism nor cardiovascular functions come into play. Training in this area is used to promote speed and maximum strength as well as to train intramuscular coordination. Caution is also advised here, as the stress in this area increases almost exponentially. To avoid damage to the structure, it is advisable to carry out corresponding training just as purposefully as loose units and not to work "All Out" on principle.</p>
+    </div>
+
+    <div class="zone-box">
+        <div class="zone-title">Zone M1: FatMax</div>
+        <p>Metabolic zone 1 is set around the maximum fat burning. It marks the area in which the body can draw the largest amount of fats for energy production. At the same time, this zone also represents the intensity at which the body can actively use the most oxygen for energy production. It is thus simultaneously that area in which the body achieves the best ratio of oxygen uptake and use.</p>
+    </div>
+
+    <div class="zone-box">
+        <div class="zone-title">Zone M2: CarbMax</div>
+        <p>The CarbMax area marks that performance spectrum for which the body needs 60 to 90 grams of carbohydrates per hour. This value comes from the fact that sports science currently assumes that these are the relative maximum values that can still be absorbed under stress. However, since these amounts are enormously individual and also dependent on the consumed sports nutrition, this is merely a guideline that can be used to plan nutrition.</p>
+    </div>
+
+    <p><strong>Working with Training Zones:</strong></p>
+
+    <p>The training zones are listed in the report in tabular form and each show from and to which performance they extend. In addition, the respective, direct reactions such as heart rate, the amount of metabolized fats and carbohydrates, as well as oxygen uptake are displayed.</p>
+
+    <p>Here we advise looking at the table before a training session: with its help, it can be estimated how much of which energy source will be needed approximately, which simplifies nutrition on the go. In combination with the measured basic metabolism, this results in a very effective tool with which nutrition around sports can be designed very efficiently.</p>
+
+    <h2>Page 7: Respiratory Rate and Respiratory Quotient</h2>
+
+    <p>The comparison of respiratory rates and the respiratory quotient can help to recognize any connections between breathing and metabolism as well as to assess whether the subject is also healthy.</p>
+
+    <div class="breathing-chart">
+        <img src="imgs/breathing-chart.png" alt="Breathing and RQ Chart">
+    </div>
+
+    <p>In a healthy body, the following patterns can often be recognized: Below VT1, respiratory rates are not infrequently somewhat irregular, as in the figurative sense, "breathing can occur when necessary". That is, the body adapts situationally very quickly and reactively to the stress. Subsequently, breathing becomes more regular, as from VT1 onwards, there is a certain need for regular and continuous oxygen uptake. In the VT2 area and above, the breathing pattern usually increases almost linearly until it can become very irregular and sometimes erratic shortly before maximum performance.</p>
+
+    <p>At the same time, first signs of cardiac arrhythmias can be recognized here. If an athlete, for example, already shows a so-called Cheyne-Stokes breathing pattern at low stress, this can be an indication of a cardiovascular disorder or enormous overload of the entire system. If we recognize such patterns during diagnostics, we naturally inform our customers and advise them to have themselves examined by a specialist.</p>
+
+    <p>The respiratory quotient, on the other hand, is a reference point for the effective participation of oxygen in metabolic processes. Its progression can help to better understand the significance of breathing in connection with metabolic efficiency and also to determine whether targeted training of the respiratory muscles is necessary.</p>
+
+    <h2>Page 8: Training Intensities and Cardiovascular Functions</h2>
+
+    <p>Training intensities differ from training zones in that they encompass a much broader spectrum of performances and are divided into only three categories. They can help to design training somewhat more freely while still keeping an eye on the important cornerstones. They primarily relate to muscular performance. The associated physical reactions (such as heart rate) can also be taken as a reference point here to recognize training progress or general physiological changes: if, for example, the pulse in one of the areas consistently decreases over time, it can be assumed that muscular adaptation has occurred. The intensities are defined as follows:</p>
+
+    <div class="zone-box">
+        <div class="zone-title">Intensity 1: LIT, Low Intensity Training</div>
+        <p>This area is also called the "Sub-Stress-Zone" as it is below VT1 and thus below measurable, muscular exertion. The energy balance can be subject to large fluctuations here, which is why one should always be aware that muscular, low intensity does not necessarily mean the same for metabolism.</p>
+    </div>
+
+    <div class="zone-box">
+        <div class="zone-title">Intensity 2: SII, Stress-Inducing Intensity</div>
+        <p>The name already says it: in this area, the body is increasingly exposed to muscular stress and thus stress. Depending on the training phase and focus, this can be used very specifically, but if too much is moved in this area in general, it can have devastating consequences. After a certain time, it is no longer possible for the body to recover sustainably as the stressors were triggered too large and too persistently. Here we speak again of the "Zone 3 - Stagnation", which can lead to a standstill in training progress in the short term, and in the long term can end in serious overtraining. The reason for this is the still perceived relatively intensity despite the muscular exertion, which leads to metabolic overload and cardiovascular stress not being noticed immediately.</p>
+    </div>
+
+    <div class="zone-box">
+        <div class="zone-title">Intensity 3: HIT, High Intensity Training</div>
+        <p>In the 3rd intensity, the body is also subjected to stress, in this case, however, in a targeted and deliberate manner. For the development of various, physiological functions, a certain stress or even targeted overload is necessary, which can trigger the body's own repair mechanisms. Training that takes place at these high intensities will also always trigger a quick and lasting fatigue as they stress the entire structure of the body.</p>
+    </div>
+
+    <p>In the analysis of cardiovascular functions, it is primarily about determining at a very basic level whether the athlete's heart is healthy and suitable for endurance performances. For this, three focus points are set: the stroke volume SV, the oxygen pulse PO2, as well as the calculated cardiac output HMV.</p>
+
+    <p>Our heart has (among other things) the task of supplying the body with energy, in this specific context in the form of oxygen. From an anatomical point of view, the heart is certainly complex, but ultimately a muscle, and it has two ways to respond to a higher oxygen deman

@@ -1,0 +1,381 @@
+<style>
+  body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 20px;
+  }
+  .header {
+    text-align: center;
+    font-weight: bold;
+    font-size: 20px;
+    margin-bottom: 30px;
+  }
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+  }
+  th, td {
+    border: 1px solid black;
+    padding: 8px;
+    text-align: center;
+  }
+  th {
+    background-color: #f2f2f2;
+    font-weight: bold;
+  }
+  .zone-title {
+    width: 20%;
+    background-color: #f0f7f0;
+    font-weight: bold;
+  }
+  .zone1 {
+    background-color: #f0f7f0;
+  }
+  .zone2 {
+    background-color: #f0f7f0;
+  }
+  .zone3 {
+    background-color: #f0f7f0;
+  }
+  .zone4 {
+    background-color: #f0f7f0;
+  }
+  .zone5 {
+    background-color: #f5f0f7;
+  }
+  .zone6 {
+    background-color: #fbf0f5;
+  }
+  .split-header {
+    border-bottom: none;
+  }
+  .sub-header {
+    border-top: none;
+  }
+  .metric-label {
+    font-weight: normal;
+    font-size: 12px;
+  }
+</style>
+
+<div class="header">
+  Individual, Physiological Training Zones:
+</div>
+
+<table>
+  <thead>
+    <tr>
+      <th rowspan="2">Zone</th>
+      <th rowspan="2"></th>
+      <th colspan="2">Speed</th>
+      <th rowspan="2">Heart rate</th>
+      <th rowspan="2">Energy needs</th>
+      <th colspan="2">Fat portion:</th>
+      <th colspan="2">Carb portion:</th>
+      <th colspan="2">Prot-Constant:</th>
+      <th colspan="2">VO2:</th>
+    </tr>
+    <tr>
+      <th>km/h</th>
+      <th>min/km</th>
+      <th>kcal/h</th>
+      <th>g/h</th>
+      <th>kcal/h</th>
+      <th>g/h</th>
+      <th>kcal/h</th>
+      <th>g/h</th>
+      <th>Abs.</th>
+      <th>Rel.</th>
+    </tr>
+  </thead>
+  <tbody>
+    <!-- Zone 1 -->
+    <tr class="zone1">
+      <td class="zone-title" rowspan="3">Zone 1<br>Active Recovery</td>
+      <td>From</td>
+      <td>6.0</td>
+      <td>10:00</td>
+      <td>105</td>
+      <td>451</td>
+      <td>398</td>
+      <td>43</td>
+      <td>39</td>
+      <td>10</td>
+      <td>13</td>
+      <td>3</td>
+      <td>1603</td>
+      <td>22.8</td>
+    </tr>
+    <tr class="zone1">
+      <td>Ø</td>
+      <td>7.4</td>
+      <td>08:08</td>
+      <td>119</td>
+      <td>545</td>
+      <td>470</td>
+      <td>51</td>
+      <td>62</td>
+      <td>15</td>
+      <td>13</td>
+      <td>3</td>
+      <td>1928</td>
+      <td>27.4</td>
+    </tr>
+    <tr class="zone1">
+      <td>To</td>
+      <td>8.7</td>
+      <td>06:51</td>
+      <td>133</td>
+      <td>640</td>
+      <td>539</td>
+      <td>58</td>
+      <td>88</td>
+      <td>21</td>
+      <td>13</td>
+      <td>3</td>
+      <td>2247</td>
+      <td>32.0</td>
+    </tr>
+
+    <!-- Zone 2 -->
+    <tr class="zone2">
+      <td class="zone-title" rowspan="3">Zone 2<br>Muscular Base</td>
+      <td>From</td>
+      <td>8.8</td>
+      <td>06:50</td>
+      <td>134</td>
+      <td>640</td>
+      <td>539</td>
+      <td>58</td>
+      <td>88</td>
+      <td>21</td>
+      <td>13</td>
+      <td>3</td>
+      <td>2247</td>
+      <td>32.0</td>
+    </tr>
+    <tr class="zone2">
+      <td>Ø</td>
+      <td>10.3</td>
+      <td>05:50</td>
+      <td>148</td>
+      <td>743</td>
+      <td>596</td>
+      <td>64</td>
+      <td>134</td>
+      <td>33</td>
+      <td>13</td>
+      <td>3</td>
+      <td>2586</td>
+      <td>36.8</td>
+    </tr>
+    <tr class="zone2">
+      <td>To</td>
+      <td>11.8</td>
+      <td>05:05</td>
+      <td>163</td>
+      <td>844</td>
+      <td>600</td>
+      <td>65</td>
+      <td>231</td>
+      <td>56</td>
+      <td>13</td>
+      <td>3</td>
+      <td>2911</td>
+      <td>41.4</td>
+    </tr>
+
+    <!-- Zone 3 -->
+    <tr class="zone3">
+      <td class="zone-title" rowspan="3">Zone 3<br>Development<br>Zone</td>
+      <td>From</td>
+      <td>11.8</td>
+      <td>05:04</td>
+      <td>164</td>
+      <td>845</td>
+      <td>600</td>
+      <td>65</td>
+      <td>231</td>
+      <td>56</td>
+      <td>13</td>
+      <td>3</td>
+      <td>2913</td>
+      <td>41.5</td>
+    </tr>
+    <tr class="zone3">
+      <td>Ø</td>
+      <td>13.1</td>
+      <td>04:35</td>
+      <td>175</td>
+      <td>927</td>
+      <td>529</td>
+      <td>57</td>
+      <td>385</td>
+      <td>94</td>
+      <td>13</td>
+      <td>3</td>
+      <td>3167</td>
+      <td>45.1</td>
+    </tr>
+    <tr class="zone3">
+      <td>To</td>
+      <td>14.3</td>
+      <td>04:11</td>
+      <td>187</td>
+      <td>1009</td>
+      <td>341</td>
+      <td>37</td>
+      <td>654</td>
+      <td>160</td>
+      <td>13</td>
+      <td>3</td>
+      <td>3416</td>
+      <td>48.6</td>
+    </tr>
+
+    <!-- Zone 4 -->
+    <tr class="zone4">
+      <td class="zone-title" rowspan="3">Zone 4<br>Threshold<br>Zone</td>
+      <td>From</td>
+      <td>14.3</td>
+      <td>04:10</td>
+      <td>188</td>
+      <td>1009</td>
+      <td>340</td>
+      <td>37</td>
+      <td>657</td>
+      <td>160</td>
+      <td>13</td>
+      <td>3</td>
+      <td>3418</td>
+      <td>48.6</td>
+    </tr>
+    <tr class="zone4">
+      <td>VT2</td>
+      <td>15.1</td>
+      <td>03:58</td>
+      <td>195</td>
+      <td>1058</td>
+      <td>151</td>
+      <td>16</td>
+      <td>894</td>
+      <td>218</td>
+      <td>13</td>
+      <td>3</td>
+      <td>3561</td>
+      <td>50.7</td>
+    </tr>
+    <tr class="zone4">
+      <td>To</td>
+      <td>15.2</td>
+      <td>03:57</td>
+      <td>195</td>
+      <td>1061</td>
+      <td>133</td>
+      <td>14</td>
+      <td>915</td>
+      <td>223</td>
+      <td>13</td>
+      <td>3</td>
+      <td>3572</td>
+      <td>50.8</td>
+    </tr>
+
+    <!-- Zone 5 -->
+    <tr class="zone5">
+      <td class="zone-title" rowspan="3">Zone 5<br>Aerobic<br>Maximum</td>
+      <td>From</td>
+      <td>15.2</td>
+      <td>03:56</td>
+      <td>196</td>
+      <td>1061</td>
+      <td>133</td>
+      <td>14</td>
+      <td>915</td>
+      <td>223</td>
+      <td>13</td>
+      <td>3</td>
+      <td>3572</td>
+      <td>50.8</td>
+    </tr>
+    <tr class="zone5">
+      <td>Ø</td>
+      <td>16.7</td>
+      <td>03:35</td>
+      <td>201</td>
+      <td>1061</td>
+      <td>133</td>
+      <td>14</td>
+      <td>915</td>
+      <td>223</td>
+      <td>13</td>
+      <td>3</td>
+      <td>3572</td>
+      <td>50.8</td>
+    </tr>
+    <tr class="zone5">
+      <td>To</td>
+      <td>18.2</td>
+      <td>03:17</td>
+      <td>205</td>
+      <td>1061</td>
+      <td>133</td>
+      <td>14</td>
+      <td>915</td>
+      <td>223</td>
+      <td>13</td>
+      <td>3</td>
+      <td>3572</td>
+      <td>50.8</td>
+    </tr>
+
+    <!-- Zone 6 -->
+    <tr class="zone6">
+      <td class="zone-title" rowspan="3">Zone 6<br>Maximum<br>Zone</td>
+      <td>From</td>
+      <td>18.2</td>
+      <td>03:16</td>
+      <td>205</td>
+      <td>1061</td>
+      <td>133</td>
+      <td>14</td>
+      <td>915</td>
+      <td>223</td>
+      <td>13</td>
+      <td>3</td>
+      <td>3572</td>
+      <td>50.8</td>
+    </tr>
+    <tr class="zone6">
+      <td>Ø</td>
+      <td>20.0</td>
+      <td>02:59</td>
+      <td>205</td>
+      <td>1061</td>
+      <td>133</td>
+      <td>14</td>
+      <td>915</td>
+      <td>223</td>
+      <td>13</td>
+      <td>3</td>
+      <td>3572</td>
+      <td>50.8</td>
+    </tr>
+    <tr class="zone6">
+      <td>To</td>
+      <td>21.8</td>
+      <td>02:44</td>
+      <td>205</td>
+      <td>1061</td>
+      <td>133</td>
+      <td>14</td>
+      <td>915</td>
+      <td>223</td>
+      <td>13</td>
+      <td>3</td>
+      <td>3572</td>
+      <td>50.8</td>
+    </tr>
+  </tbody>
+</table>

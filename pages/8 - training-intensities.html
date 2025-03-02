@@ -1,0 +1,261 @@
+<style>
+  body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 20px;
+  }
+  .header {
+    text-align: center;
+    font-weight: bold;
+    font-size: 20px;
+    margin-bottom: 20px;
+  }
+  .explanation {
+    margin-bottom: 20px;
+    line-height: 1.5;
+  }
+  .section-title {
+    background-color: #d8e4e8;
+    padding: 10px;
+    font-weight: bold;
+    text-align: center;
+    margin: 20px 0;
+  }
+  .chart-placeholder {
+    width: 100%;
+    height: 250px;
+    border: 1px dashed #ccc;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 20px 0;
+    background-color: #f9f9f9;
+  }
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+  }
+  th, td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: center;
+  }
+  th {
+    background-color: #f2f2f2;
+  }
+  .cardiovascular-functions {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+  }
+  .function-card {
+    width: 32%;
+    border: 1px solid #ddd;
+    padding: 10px;
+    text-align: center;
+  }
+  .function-title {
+    font-weight: bold;
+    margin-bottom: 10px;
+  }
+  .stroke-volume {
+    background-color: #f2f2f2;
+  }
+  .oxygen-pulse {
+    background-color: #f5e6f8;
+  }
+  .heart-volume {
+    background-color: #ffeee6;
+  }
+  .cor-zone {
+    margin-top: 20px;
+  }
+  .cor-zone-title {
+    background-color: #d8e4e8;
+    padding: 10px;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  .cor-zone-params {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+  .param-row {
+    display: flex;
+    width: 100%;
+    margin-bottom: 10px;
+  }
+  .param-label {
+    width: 50%;
+    padding: 8px;
+  }
+  .param-value {
+    width: 25%;
+    padding: 8px;
+    text-align: center;
+    border: 1px solid #ddd;
+  }
+  .note {
+    margin-top: 20px;
+    line-height: 1.5;
+  }
+  .subscript {
+    vertical-align: sub;
+    font-size: smaller;
+  }
+</style>
+
+<div class="header">
+  Training Intensities and Cardiovascular Functions:
+</div>
+
+<div class="explanation">
+  The distinction between training intensities and zones serves to highlight the different characteristics of training. While the physiological zones shown are important for precise work and the assessment of energy balance, the intensities can be used to train specific markers of respiratory frequency or the separately shown potentials with precision.
+</div>
+
+<div class="section-title">
+  Training Intensities on Muscular Level & Visualization:
+</div>
+
+<table>
+  <thead>
+    <tr>
+      <th colspan="3"></th>
+      <th colspan="2">Speed</th>
+      <th rowspan="2">HR<br>bpm</th>
+    </tr>
+    <tr>
+      <th></th>
+      <th colspan="2"></th>
+      <th>km/h</th>
+      <th>min/km</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td rowspan="2">In1: LIT<br>Low-Intensity Training, Sub-Stress-Zone</td>
+      <td>From:</td>
+      <td></td>
+      <td>6.0</td>
+      <td>10:00</td>
+      <td>105</td>
+    </tr>
+    <tr>
+      <td>To:</td>
+      <td></td>
+      <td>11.8</td>
+      <td>05:05</td>
+      <td>163</td>
+    </tr>
+    <tr>
+      <td rowspan="2">In2: SIT<br>Stress-Inducing Training</td>
+      <td>From:</td>
+      <td></td>
+      <td>11.8</td>
+      <td>05:04</td>
+      <td>163</td>
+    </tr>
+    <tr>
+      <td>To:</td>
+      <td></td>
+      <td>15.1</td>
+      <td>03:58</td>
+      <td>195</td>
+    </tr>
+    <tr>
+      <td rowspan="2">In3: HIT<br>High-Intensity Training</td>
+      <td>From:</td>
+      <td></td>
+      <td>15.1</td>
+      <td>03:57</td>
+      <td>195</td>
+    </tr>
+    <tr>
+      <td>To:</td>
+      <td></td>
+      <td>21.8</td>
+      <td>02:44</td>
+      <td>195</td>
+    </tr>
+  </tbody>
+</table>
+
+<div class="chart-placeholder">
+  <img src="imgs/chart3.png" alt="" style="max-width: 100%; max-height: 100%;">
+</div>
+
+<div class="section-title">
+  Cardiovascular Functions
+</div>
+
+<div class="cardiovascular-functions">
+  <div class="function-card stroke-volume">
+    <div class="function-title">Max. Stroke Volume<br>mL/bpm</div>
+    <div>150.94 mL/bpm</div>
+    <div>94 bpm</div>
+    <div>4.9 km/h</div>
+    <div>12:19 min/km</div>
+  </div>
+  <div class="function-card oxygen-pulse">
+    <div class="function-title">Max. Oxygen-Pulse<br>VO2/mL/bpm</div>
+    <div>18.47 VO2/mL/bpm</div>
+    <div>178 bpm</div>
+    <div>13.4 km/h</div>
+    <div>04:28 min/km</div>
+  </div>
+  <div class="function-card heart-volume">
+    <div class="function-title">Max. Heart-Minute Volume<br>L/min</div>
+    <div>21.6 L/min</div>
+    <div>195 bpm</div>
+    <div>15.2 km/h</div>
+    <div>03:57 min/km</div>
+  </div>
+</div>
+
+<div class="cor-zone-title">
+  COR-Zone for Cardiovascular Development
+</div>
+
+<div class="cor-zone-params">
+  <div class="param-row">
+    <div class="param-label">Parameter:</div>
+    <div class="param-value">From:</div>
+    <div class="param-value">To:</div>
+  </div>
+  <div class="param-row">
+    <div class="param-label">Heart rate HF (bpm):</div>
+    <div class="param-value">94</div>
+    <div class="param-value">178</div>
+  </div>
+  <div class="param-row">
+    <div class="param-label">Stroke volume SV (mL/bpm)</div>
+    <div class="param-value">150.94</div>
+    <div class="param-value">120.48</div>
+  </div>
+  <div class="param-row">
+    <div class="param-label">Oxygen-Pulse PO2 (VO2/mL/min/bpm)</div>
+    <div class="param-value">14.2</div>
+    <div class="param-value">18.5</div>
+  </div>
+  <div class="param-row">
+    <div class="param-label">Heart-Minute Volume HMV (L/min)</div>
+    <div class="param-value">13.0</div>
+    <div class="param-value">20.9</div>
+  </div>
+  <div class="param-row">
+    <div class="param-label">Corresponding Speed (km/h)</div>
+    <div class="param-value">4.9</div>
+    <div class="param-value">13.4</div>
+  </div>
+</div>
+
+<div class="note">
+  The range between the maximum stroke volume SV SV<span class="subscript">Max</span> and the maximum oxygen-pulse PO2<span class="subscript">Max</span> can be used to train the heart in its performance capability as a muscle in a targeted way (COR-Zone, see visualization on the following page).
+</div>
+
+<div class="note">
+  While the maximum stroke volume simultaneously marks the maximum amount of blood that the heart can reach without a significant increase in heart rate (HF), the maximum of absorbable/deliverable oxygen is defined by a combination of increased heart rate and exhaustion of the available volume.
+</div>

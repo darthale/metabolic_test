@@ -1,0 +1,101 @@
+<style>
+  body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 20px;
+  }
+  .header {
+    text-align: center;
+    font-weight: bold;
+    font-size: 20px;
+    margin-bottom: 20px;
+  }
+  .chart-placeholder {
+    width: 100%;
+    height: 500px;
+    border: 1px dashed #ccc;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+    background-color: #f9f9f9;
+  }
+  .explanation {
+    margin-bottom: 20px;
+    line-height: 1.5;
+  }
+  .legend {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 10px;
+    margin-bottom: 30px;
+  }
+  .legend-item {
+    display: flex;
+    align-items: center;
+    margin-right: 20px;
+    margin-bottom: 10px;
+  }
+  .legend-color {
+    width: 30px;
+    height: 2px;
+    margin-right: 5px;
+  }
+  .cor-zone {
+    background-color: #d8f3d8;
+    width: 15px;
+    height: 15px;
+    margin-right: 5px;
+    opacity: 0.5;
+  }
+  .stroke-volume {
+    background-color: gray;
+  }
+  .oxygen-pulse {
+    background-color: orange;
+  }
+  .heart-rate {
+    background-color: red;
+  }
+</style>
+
+<div class="header">
+  Visualization of Heart Rate Hf (bpm) and Cardiovascular Functions:
+</div>
+
+<div class="chart-placeholder">
+  <img src="imgs/chart4.png" alt="" style="max-width: 100%; max-height: 100%;">
+
+</div>
+
+<div class="legend">
+  <div class="legend-item">
+    <div class="cor-zone"></div>
+    <span>COR-Zone</span>
+  </div>
+  <div class="legend-item">
+    <div class="legend-color stroke-volume"></div>
+    <span>Stroke volume SV</span>
+  </div>
+  <div class="legend-item">
+    <div class="legend-color oxygen-pulse"></div>
+    <span>Oxygen-Pulse PO2</span>
+  </div>
+  <div class="legend-item">
+    <div class="legend-color heart-rate"></div>
+    <span>Heart rate Hf</span>
+  </div>
+</div>
+
+<div class="explanation">
+  The visualization of the most important cardiovascular parameters in comparison with heart rate provides insight into the functioning of the heart and its health.
+</div>
+
+<div class="explanation">
+  If the maximum of the stroke volume occurs at a relatively low heart rate, this indicates that the heart can adapt its stroke performance to the situation of stress. This is shown in the relatively step-like increase of the heart rate Hf. At the ventilatory threshold 1 VT1, this usually transitions into a more and more linear increase, which is an indicator that the heart must respond to muscular stress with greater performance.
+</div>
+
+<div class="explanation">
+  The course of the oxygen pulse PO2 indicates whether cardiovascular performance capacity is already exhausted: if the value begins to decrease before muscular exertion, this is a sign that the required oxygen can no longer be delivered by the heart and therefore an acute O2 deficit develops.
+</div>
